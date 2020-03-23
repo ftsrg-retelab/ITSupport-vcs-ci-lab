@@ -58,9 +58,9 @@ public class TrainSystemTest {
 	@Test
 	public void SetJoystickPositionByUser(){
 		UserChangeRefSpeed userChangeRefSpeed = new UserChangeRefSpeed(user,controller);
-		userChangeRefSpeed.setNewSpeedByChangingTheJoyStickPosition(2);
+		userChangeRefSpeed.setNewSpeedByChangingTheJoyStickPosition(3);
 
-		Assert.assertEquals(2,controller.getReferenceSpeed());
+		Assert.assertEquals(3,controller.getReferenceSpeed());
 	}
 	
 }
