@@ -19,7 +19,7 @@ public class TrainControllerImpl implements TrainController {
 		        referenceSpeed = 0;
             }
 		}
-		System.out.println(this.referenceSpeed);
+		ProperLogger.ProperlyLog("üzenet");
 		enforceSpeedLimit();
 	}
 
