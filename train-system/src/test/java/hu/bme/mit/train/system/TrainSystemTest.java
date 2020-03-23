@@ -1,5 +1,6 @@
 package hu.bme.mit.train.system;
 
+import hu.bme.mit.train.user.UserChangeRefSpeed;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -54,5 +55,12 @@ public class TrainSystemTest {
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
 
+	@Test
+	public void SetJoystickPositionByUser(){
+		UserChangeRefSpeed userChangeRefSpeed = new UserChangeRefSpeed(user,controller);
+		userChangeRefSpeed.setNewSpeedByChangingTheJoyStickPosition(2);
+
+		Assert.assertEquals(2,controller.getReferenceSpeed());
+	}
 	
 }
